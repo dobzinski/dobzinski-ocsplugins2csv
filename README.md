@@ -10,6 +10,15 @@ On OCS by Menu "Search with various criteria", when One data (Hardware) for Mult
 3. Edit var.php and inform all values to MySQL or MariaDB, and check the modules variable;
 4. If do have another module, create a new file "yourmodule2csv.php", develop for export CSV format, and edit download.php to insert your new file in the "switch/case".
 
+# Item in Menu:
+1. Edit the /usr/share/ocsinventory-reports/ocsreports/require/html_header.php and add a new line 70, as below:
+```
+68             if (isset($_SESSION['OCS']["loggeduser"]) && !isset($protectedGet["popup"])) {
+69                 echo '<ul class="nav nav navbar-nav navbar-right">';
+70                 echo "<li><a href='/csv/' style=\"background-color: #961B7E !important; font-weight: bold !important; color: #ffffff !important;\" target=\"_blank\">CSV</a></li>";
+71                 if (isset($_SESSION['OCS']["TRUE_mesmachines"])) {
+```
+
 # Extra:
 If do you whant to tntegrate the login with LDAP/AD with a Security Group:
 
