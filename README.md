@@ -6,7 +6,7 @@ On OCS by Menu "Search with various criteria", when One data (Hardware) for Mult
 
 # Workaround:
 1. Create the "csv" folder in /var/www/html/;
-2. Run git clone for this repository, and move all files to the new folder;
+2. Run git clone for this repository, and move all php files to the new folder;
 3. Edit var.php and inform all values to MySQL or MariaDB, and check the modules variable;
 4. If do have another module, create a new file "yourmodule2csv.php", develop for export CSV format, and edit download.php to insert your new file in the "switch/case".
 
